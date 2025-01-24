@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 async function getPost(id) {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
     if (!res.ok) {
@@ -14,7 +16,7 @@ export default async function Post({ params }) {
         <div style={{ padding: "1.25rem", height: "100vh" }}>
             <h1 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}>{post.id}. {post.title}</h1>
             <p>{post.body}</p>
-            <a
+            <Link
                 href="/"
                 style={{
                     marginTop: "1.5rem",
@@ -27,7 +29,7 @@ export default async function Post({ params }) {
                 }}
             >
                 Back to Home
-            </a>
+            </Link>
         </div>
     );
 }
