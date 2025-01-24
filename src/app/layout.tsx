@@ -34,7 +34,9 @@ export default function RootLayout({
               <li>
                 <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/profile">Profile</Link>
               </li>
-              
+              <li>
+                <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/login">Login</Link>
+              </li>
             </ul>
           </nav>
         </header>
