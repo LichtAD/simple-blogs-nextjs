@@ -28,18 +28,18 @@ export default function RootLayout({
               <li>
                 <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/">Home</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/products">Products</Link>
-              </li>
+              </li> */}
               <li>
                 <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/profile">Profile</Link>
               </li>
+              
             </ul>
           </nav>
         </header>
         <main style={{
           padding: "10px",
-          height: "100vh"
         }}>{children}</main>
         <footer style={{
           borderTop: "1px solid black",
