@@ -2,7 +2,9 @@ import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components
 
 const page = () => {
     return (
-        <div>
+        <div style={{
+            height: "100vh",
+        }}>
             <LoginLink>
                 <h1>Login</h1>
             </LoginLink>
