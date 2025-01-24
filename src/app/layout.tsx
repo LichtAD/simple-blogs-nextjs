@@ -34,9 +34,6 @@ export default async function RootLayout({
               <li>
                 <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/">Home</Link>
               </li>
-              {/* <li>
-                <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/products">Products</Link>
-              </li> */}
               {
                 user ?
                   <li>
@@ -61,14 +58,6 @@ export default async function RootLayout({
                     </LoginLink>
                   </li>
               }
-              {/* <li>
-                <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/login">Login</Link>
-              </li>
-              <li>
-                <LogoutLink>
-                  <button>Logout</button>
-                </LogoutLink>
-              </li> */}
             </ul>
           </nav>
         </header>
