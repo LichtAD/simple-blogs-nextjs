@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export const metadata = {
   title: 'Next.js',
@@ -37,20 +37,38 @@ export default async function RootLayout({
               {/* <li>
                 <Link  style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/products">Products</Link>
               </li> */}
-              <li>
-                <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/profile">Profile</Link>
-              </li>
               {
                 user ?
+                  <li>
+                    <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/profile">Profile</Link>
+                  </li> :
+                  <li>
+                    <LoginLink>
+                      <button style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }}>Profile</button>
+                    </LoginLink>
+                  </li>
+              }
+              {
+                (user) ?
                   <li>
                     <LogoutLink>
                       <button style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }}>Logout</button>
                     </LogoutLink>
                   </li> :
                   <li>
-                    <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/login">Login</Link>
+                    <LoginLink>
+                      <button style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }}>Login</button>
+                    </LoginLink>
                   </li>
               }
+              {/* <li>
+                <Link style={{ textDecoration: "none", color: "black", backgroundColor: "white", padding: "10px", borderRadius: "8px" }} href="/login">Login</Link>
+              </li>
+              <li>
+                <LogoutLink>
+                  <button>Logout</button>
+                </LogoutLink>
+              </li> */}
             </ul>
           </nav>
         </header>
